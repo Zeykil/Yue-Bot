@@ -57,37 +57,40 @@ p {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
+/* Estilizando as seções com os tópicos */
 section {
-    flex: 1;
-    padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    margin-right: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px); /* Desfoque no fundo das seções */
+    backdrop-filter: blur(5px);
 }
 
-section:last-child {
-    margin-right: 0;
+section h2 {
+    color: #9c27b0; /* Cor do subtítulo */
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-/* Lista de informações */
 ul {
     list-style-type: none;
     padding-left: 0;
 }
 
 ul li {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #4a148c; /* Roxo escuro para texto */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4a148c; /* Roxo escuro */
 }
 
 /* Links */
 a {
-    color: #ab47bc; /* Roxo mais claro para os links */
+    color: #ab47bc;
     text-decoration: none;
     font-weight: bold;
 }
@@ -96,12 +99,34 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Rodapé */
+/* Caixa para termos e política */
+.terms-policy-box {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.terms-policy-box h3 {
+    color: #6a1b9a; /* Cor dos subtítulos */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.terms-policy-box p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Estilizando os rodapés */
 footer {
     text-align: center;
     margin-top: 40px;
     font-size: 1rem;
-    color: #7b1fa2; /* Roxo intermediário */
+    color: #7b1fa2;
 }
 
 footer a {
