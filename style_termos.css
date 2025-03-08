@@ -23,57 +23,65 @@ body {
 /* Container principal */
 .container {
     width: 80%;
-    max-width: 1000px;
-    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.95); /* Caixa branca transparente */
     border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Sombra suave */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px); /* Dá um efeito desfocado no fundo */
+    backdrop-filter: blur(10px); /* Efeito desfocado no fundo */
 }
 
-/* Cabeçalho */
+/* Título */
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     color: #9c27b0; /* Roxo claro para o título */
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra no título */
 }
 
+/* Parágrafos de introdução */
 p {
-    font-size: 1.2rem;
-    color: #e1bee7; /* Roxo mais claro para o texto */
+    font-size: 1.3rem;
+    color: #9e4e97; /* Roxo mais suave */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* Seções de termos */
+/* Estilo dos subtítulos (h2) */
 h2 {
-    color: #9c27b0;
+    color: #6a1b9a; /* Roxo escuro */
     font-size: 2rem;
     margin-bottom: 15px;
     text-align: left;
+    font-weight: bold;
+    text-transform: uppercase; /* Títulos em caixa alta */
+    letter-spacing: 1px;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #e1bee7;
+/* Estilo dos parágrafos dentro dos termos */
+section p {
+    font-size: 1.1rem;
+    color: #5d2c8b;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
-/* Estilizando o link */
+/* Estilizando links */
 a {
     color: #ab47bc;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #ff4081;
     text-decoration: underline;
 }
 
@@ -82,39 +90,29 @@ footer {
     margin-top: 30px;
     font-size: 1rem;
     text-align: center;
-    color: #e1bee7;
+    color: #9e4e97;
 }
 
 footer p {
     margin-top: 10px;
 }
 
-/* Estilizando as seções */
-section {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-}
-
-/* Caixa para texto longo */
-section p {
-    color: #7b1fa2;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     p {
         font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
     }
 }
