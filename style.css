@@ -8,7 +8,9 @@
 /* Estilizando o corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #5c6bc0, #42a5f5);
+    background: url('https://www.transparenttextures.com/patterns/diamond.png'), linear-gradient(135deg, #9c27b0, #6a1b9a); /* Imagem de fundo com gradiente */
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
     padding: 0;
     height: 100vh;
@@ -24,11 +26,12 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(10px); /* Dá um efeito desfocado no fundo */
 }
 
 /* Cabeçalho */
@@ -38,14 +41,15 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #5c6bc0;
+    color: #9c27b0; /* Roxo claro para o título */
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: #e1bee7; /* Roxo mais claro para o texto */
 }
 
 /* Seção de conteúdo principal */
@@ -58,10 +62,11 @@ p {
 section {
     flex: 1;
     padding: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     margin-right: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Desfoque no fundo das seções */
 }
 
 section:last-child {
@@ -75,14 +80,14 @@ ul {
 }
 
 ul li {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #333;
+    color: #4a148c; /* Roxo escuro para texto */
 }
 
 /* Links */
 a {
-    color: #42a5f5;
+    color: #ab47bc; /* Roxo mais claro para os links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -96,11 +101,11 @@ footer {
     text-align: center;
     margin-top: 40px;
     font-size: 1rem;
-    color: #555;
+    color: #7b1fa2; /* Roxo intermediário */
 }
 
 footer a {
-    color: #42a5f5;
+    color: #ab47bc;
     text-decoration: none;
 }
 
