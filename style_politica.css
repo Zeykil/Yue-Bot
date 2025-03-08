@@ -8,7 +8,7 @@
 /* Estilizando o corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://www.transparenttextures.com/patterns/diamond.png'), linear-gradient(135deg, #9c27b0, #6a1b9a); /* Imagem de fundo com gradiente */
+    background: url('https://www.transparenttextures.com/patterns/diamond.png'), linear-gradient(135deg, #9c27b0, #6a1b9a); /* Fundo com padrão e gradiente */
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -24,55 +24,55 @@ body {
 .container {
     width: 80%;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.95); /* Caixa branca transparente */
+    background-color: rgba(255, 255, 255, 0.95); /* Caixa branca translúcida */
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Sombra suave */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px); /* Efeito desfocado no fundo */
+    align-items: flex-start;
+    backdrop-filter: blur(10px); /* Efeito desfocado */
 }
 
 /* Título */
 h1 {
     font-size: 3.5rem;
     font-weight: bold;
-    color: #9c27b0; /* Roxo claro para o título */
+    color: #9c27b0;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra no título */
-}
-
-/* Parágrafos de introdução */
-p {
-    font-size: 1.3rem;
-    color: #9e4e97; /* Roxo mais suave */
-    text-align: center;
-    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo dos subtítulos (h2) */
 h2 {
-    color: #6a1b9a; /* Roxo escuro */
+    color: #6a1b9a;
     font-size: 2rem;
     margin-bottom: 15px;
     text-align: left;
     font-weight: bold;
-    text-transform: uppercase; /* Títulos em caixa alta */
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Estilo dos parágrafos dentro da política */
-section p {
-    font-size: 1.1rem;
-    color: #5d2c8b;
-    line-height: 1.8;
+/* Estilo dos parágrafos */
+p {
+    font-size: 1.3rem;
+    color: #9e4e97;
+    text-align: left;
     margin-bottom: 20px;
 }
 
-/* Estilizando links */
+/* Caixa de conteúdo (tópicos) */
+ul {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #9e4e97;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos links */
 a {
     color: #ab47bc;
     text-decoration: none;
@@ -85,7 +85,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Rodapé */
 footer {
     margin-top: 30px;
     font-size: 1rem;
