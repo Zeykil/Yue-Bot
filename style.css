@@ -8,48 +8,88 @@
 /* Estilizando o corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://www.transparenttextures.com/patterns/diamond.png'), linear-gradient(135deg, #9c27b0, #6a1b9a); /* Imagem de fundo com gradiente */
+    background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
-    color: white;
-    padding: 0;
-    height: 100vh;
+    color: #ffffff; /* Texto branco para contraste com o fundo */
+    padding: 20px; /* Adicionando padding para evitar cortes */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de saída */
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
 /* Container principal */
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.4); /* Caixa mais escura e transparente */
     border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px; /* Reduzindo o padding para evitar cortes */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px); /* Dá um efeito desfocado no fundo */
+    backdrop-filter: blur(10px); /* Efeito desfocado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    margin: 20px 0; /* Margem para evitar cortes */
+    animation: fadeInUp 0.8s ease-out; /* Aplicando a animação de entrada */
+}
+
+/* Aplicando animação de saída ao container */
+.container.fade-out {
+    animation: fadeOutDown 0.8s ease-out forwards;
 }
 
 /* Cabeçalho */
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduzindo a margem */
+    animation: fadeInUp 0.8s ease-out 0.2s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem; /* Título menor para caber em telas menores */
     font-weight: bold;
     margin-bottom: 10px;
-    color: #9c27b0; /* Roxo claro para o título */
+    color: #ffffff; /* Título branco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
 }
 
 p {
-    font-size: 1.5rem;
-    color: #e1bee7; /* Roxo mais claro para o texto */
+    font-size: 1.2rem; /* Texto um pouco menor */
+    color: #e0e0e0; /* Texto cinza claro */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out 0.4s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 /* Seção de conteúdo principal */
@@ -59,22 +99,30 @@ p {
     width: 100%;
     flex-direction: column;
     margin-top: 20px;
+    animation: fadeInUp 0.8s ease-out 0.6s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 /* Estilizando as seções com os tópicos */
 section {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo mais escuro e transparente */
+    padding: 20px; /* Reduzindo o padding */
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px); /* Efeito desfocado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    animation: fadeInUp 0.8s ease-out 0.8s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 section h2 {
-    color: #9c27b0; /* Cor do subtítulo */
-    font-size: 2rem;
+    color: #ffffff; /* Título branco */
+    font-size: 1.8rem; /* Título menor */
     margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -83,68 +131,111 @@ ul {
 }
 
 ul li {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Texto menor */
     margin-bottom: 10px;
-    color: #4a148c; /* Roxo escuro */
+    color: #e0e0e0; /* Texto cinza claro */
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: #ffffff; /* Marcador branco */
+    font-size: 1.2rem; /* Marcador menor */
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
 /* Links */
 a {
-    color: #ab47bc;
+    color: #ffffff; /* Links brancos */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #e0e0e0; /* Cinza claro ao passar o mouse */
     text-decoration: underline;
 }
 
 /* Caixa para termos e política */
 .terms-policy-box {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo mais escuro e transparente */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* Efeito desfocado */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    animation: fadeInUp 0.8s ease-out 1s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 .terms-policy-box h3 {
-    color: #6a1b9a; /* Cor dos subtítulos */
-    font-size: 1.8rem;
+    color: #ffffff; /* Título branco */
+    font-size: 1.5rem; /* Título menor */
     margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .terms-policy-box p {
-    color: #555;
-    font-size: 1.2rem;
+    color: #e0e0e0; /* Texto cinza claro */
+    font-size: 1rem; /* Texto menor */
     line-height: 1.6;
 }
 
 /* Estilizando os rodapés */
 footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 1rem;
-    color: #7b1fa2;
+    margin-top: 30px; /* Reduzindo a margem */
+    font-size: 0.9rem; /* Texto menor */
+    color: #e0e0e0; /* Texto cinza claro */
+    animation: fadeInUp 0.8s ease-out 1.2s; /* Animação com delay */
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 footer a {
-    color: #ab47bc;
+    color: #ffffff; /* Links brancos */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
+    color: #e0e0e0; /* Cinza claro ao passar o mouse */
     text-decoration: underline;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
+    h1 {
+        font-size: 2rem; /* Título ainda menor em telas pequenas */
     }
 
-    section {
-        margin-bottom: 20px;
+    p {
+        font-size: 1rem; /* Texto menor em telas pequenas */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Título menor em telas pequenas */
+    }
+
+    ul li {
+        font-size: 0.9rem; /* Texto menor em telas pequenas */
+    }
+
+    .terms-policy-box h3 {
+        font-size: 1.2rem; /* Título menor em telas pequenas */
+    }
+
+    .terms-policy-box p {
+        font-size: 0.9rem; /* Texto menor em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Texto menor em telas pequenas */
     }
 }
